@@ -1,6 +1,15 @@
 # Strings
 
-text = "X-DSPAM-Confidence:    0.8475"
-num=text.find("0.8475")
-n=text[num:]
-print (float(n))
+fname = input("Enter file name: ")
+fh = open(fname)
+total=0
+count=0
+for line in fh:
+    if not line.startswith("X-DSPAM-Confidence:"):
+        continue
+    l=line.find("0")
+    number=float(line[l:])
+    count=count+1
+    total=total+number
+avg=total/count
+print ("Average spam confidence:",avg)

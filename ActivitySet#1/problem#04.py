@@ -1,7 +1,5 @@
 # Conditional Execution
 
-hrs = input("Enter hours? ")
-
 hrs = input("Enter Hours:")
 h = float(hrs)
 rate=input("Enter Rate:")
